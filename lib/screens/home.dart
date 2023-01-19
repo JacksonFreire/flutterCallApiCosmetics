@@ -24,9 +24,14 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+        title: 'Cosmeticos JKS',
+        theme: ThemeData(
+        primarySwatch: Colors.brown,
+    ),
+    home: Scaffold(
       appBar: AppBar(
-        title: const Text('Cosmeticos API Example'),
+        title: const Text('Tienda Cosmeticos JKS'),
       ),
       body: _productModel == null || _productModel!.isEmpty
           ? const Center(
@@ -70,6 +75,7 @@ class _HomeState extends State<Home> {
           );
         },
       ),
+    ),
     );
   }
 }
